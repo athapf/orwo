@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <T_NOTE ID="201" TIMESTAMP="2015-09-08 14:49:37.835" CONTENT="a table"/>
+    <T_NOTE ID="202" TIMESTAMP="2015-09-08 14:41:42.134" CONTENT="a chair"/>
+    <T_NOTE ID="203" TIMESTAMP="2015-09-08 14:34:24.612" CONTENT="an umbrella"/>
+</dataset>

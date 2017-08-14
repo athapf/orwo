@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+    <ui:composition template="/WEB-INF/template/main.xhtml">
+        <ui:define name="maskName">
+            <h:outputLabel id="maskNameId">Overview</h:outputLabel>
+        </ui:define>
+
+        <ui:define name="contentSection">
+            <f:view>
+                <h:form id="form">
+                    <h1>#{msg['orwo.page.overview.title']}</h1>
+
+                    <h:dataTable var="row" width="100%"
+                                 value="#{overviewTableModel.overviewRowModelList}"
+                                 columnClasses="title,create">
+
+                        <h:column headerClass="title">
+                            <f:facet name="header">Title</f:facet>
+                            <h:outputLabel id="titleId" value="#{row.title}"/>
+                        </h:column>
+
+                        <h:column headerClass="create">
+                            <f:facet name="header">Timestamp</f:facet>
+                            <h:outputLabel id="timestampId" value="#{row.timestamp}">
+                                <f:convertDateTime type="date" pattern="yyyy-MM-dd HH:mm:ss.SSS"/>
+                            </h:outputLabel>
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+            </f:view>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
